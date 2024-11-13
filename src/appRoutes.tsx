@@ -6,8 +6,10 @@ import Kyc from './screens/Kyc';
 import Payment from './screens/Payment';
 import DebitHandler from "./screens/DebitHandler";
 
+import { homeLoader } from "./services/home.service";
+
 const routes = createBrowserRouter([
-    {path: '', element: <Home/>},
+    {path: '', element: <Home/>, loader: homeLoader},
     {path: '/login', element: <Login/>},
     {path: '/kyc', element: <Kyc/>},
     {path: '/payment', element: <Payment/>},
